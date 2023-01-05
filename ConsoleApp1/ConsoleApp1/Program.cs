@@ -74,7 +74,10 @@ foreach (var p in p3)
 {
     Console.WriteLine($"Get the people sortred = {p}");
 }
+
 Console.WriteLine("___________________________  Grouping  ____________________________");
+
+//Grouping
 var groups = people.GroupBy(p => p.BirthDay.Year);
 foreach (var group in groups)
 {
@@ -83,6 +86,18 @@ foreach (var group in groups)
         Console.WriteLine(person);
     };
     Console.WriteLine("--     --");
+}
+Console.WriteLine("___________________________  ####  ____________________________");
+var p4 = people
+    .Where(p => p.LastName.StartsWith('B'))
+    .Select(p=>
+        new {p.FirstName, p.LastName})
+    ;
+
+foreach (var p in p4)
+{
+    Console.WriteLine(p.FirstName);
+    Console.WriteLine(p.LastName);
 }
 
 
