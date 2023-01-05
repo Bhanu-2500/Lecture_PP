@@ -49,3 +49,10 @@ Console.WriteLine($"Count of people {count}");
 
 var tatalExperence = people.Sum(p => p.YearsOfExperience);
 Console.WriteLine($"Total Experience of that 10 people {tatalExperence}");
+
+var afterBorn2000 = people.Where(p => p.BirthDay.Year>2000).ToList();
+foreach (var p in afterBorn2000)
+{
+    Console.WriteLine($"Get the people who born after 2000 = {p}");
+
+}
