@@ -1,6 +1,8 @@
 ﻿// Linq
 //This style of programming called functional programming
 
+using ConsoleApp1;
+
 List<int> numbers = new List<int> { 10, 4, 55, -3, 0, -34, 1, 22, 2, 45, 3, 21 };
 
 var sum = numbers.Sum();
@@ -34,3 +36,13 @@ Console.WriteLine($"Sum of greater than 10 is {sum2}");
 
 var sum3 = numbers.Where(n => n < -200).FirstOrDefault();// this will return first or defalt
 Console.WriteLine($"First negative number {sum3}");
+
+
+var people = DataGenerator.GeneratePeople();
+foreach(var person in people)
+{
+    Console.WriteLine(person);
+}
+
+var count = people.Count();
+Console.WriteLine($"Count of people {count}");
