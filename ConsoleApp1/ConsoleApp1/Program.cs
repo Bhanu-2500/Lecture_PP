@@ -22,7 +22,7 @@ Console.WriteLine($"Last is {last}");
 //Using Where we can filter numbers, and it returns that number
 
 
-var evenNumbers = numbers.Where(n/*parameter*/ => n%2== 0/*condition*/);
+var evenNumbers = numbers.Where(n/*parameter*/ => n> 10/*condition*/);
 foreach(var num in evenNumbers)
 {
     Console.WriteLine(num);
