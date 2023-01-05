@@ -31,3 +31,6 @@ foreach(var num in greaterThanTen)
 //since Where return a collection, we can use Sum method also and get the sum of that collection
 var sum2 = numbers.Where(n/*parameter*/ => n > 10/*condition*/).Sum();
 Console.WriteLine($"Sum of greater than 10 is {sum2}");
+
+var sum3 = numbers.Where(n => n < 0).First();
+Console.WriteLine($"First negative number {sum3}");
