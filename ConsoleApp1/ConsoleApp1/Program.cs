@@ -66,11 +66,10 @@ foreach (var p in p2)
 }
 Console.WriteLine("_______________________________________________________");
 
-var p3 = people.OrderBy(p =>p.FirstName).OrderBy(p => p.BirthDay);
+var p3 = people.OrderBy(p => p.BirthDay.Year).ThenBy(p=> p.FirstName).ToList();
 foreach (var p in p3)
 {
     Console.WriteLine($"Get the people sortred = {p}");
-
 }
 
 
