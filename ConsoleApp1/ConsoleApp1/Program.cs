@@ -56,7 +56,7 @@ foreach (var p in afterBorn2000)
     Console.WriteLine($"Get the people who born after 2000 = {p}");
 
 }
-
+Console.WriteLine("_______________________________________________________");
 
 var p2 = people.OrderBy(p => p.BirthDay);
 foreach (var p in p2)
@@ -64,3 +64,14 @@ foreach (var p in p2)
     Console.WriteLine($"Get the people sortred = {p}");
 
 }
+Console.WriteLine("_______________________________________________________");
+
+var p3 = people.OrderBy(p =>p.FirstName).OrderBy(p => p.BirthDay);
+foreach (var p in p3)
+{
+    Console.WriteLine($"Get the people sortred = {p}");
+
+}
+
+
+
