@@ -67,11 +67,22 @@ foreach (var p in p2)
 Console.WriteLine("_______________________________________________________");
 
 var p3 = people.OrderBy(p => p.BirthDay.Year)
-                .ThenBy(p=> p.FirstName).ToList(); // We can get seperate from the base line this dot method
+               .ThenBy(p=> p.FirstName)
+               .ToList(); // We can get seperate from the base line this dot method
 //We can use OrderByDescending method and ThenByDescending
 foreach (var p in p3)
 {
     Console.WriteLine($"Get the people sortred = {p}");
+}
+Console.WriteLine("___________________________  Grouping  ____________________________");
+var groups = people.GroupBy(p => p.BirthDay.Year);
+foreach (var group in groups)
+{
+    foreach (var person in group)
+    {
+        Console.WriteLine(person);
+    };
+    Console.WriteLine("--     --");
 }
 
 
