@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal static class DataGenerator
+    public static class DataGenerator
     {
+
+    }
+    public class Person
+    {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Years { get; set; }
+        public DateOnly BirthDay { get; set; }
+
     }
 }
