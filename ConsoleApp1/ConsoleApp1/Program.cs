@@ -32,5 +32,5 @@ foreach(var num in greaterThanTen)
 var sum2 = numbers.Where(n/*parameter*/ => n > 10/*condition*/).Sum();
 Console.WriteLine($"Sum of greater than 10 is {sum2}");
 
-var sum3 = numbers.Where(n => n < 0).First();
+var sum3 = numbers.Where(n => n < -200).First();// this will return null object
 Console.WriteLine($"First negative number {sum3}");
