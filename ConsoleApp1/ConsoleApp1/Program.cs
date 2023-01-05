@@ -22,8 +22,12 @@ Console.WriteLine($"Last is {last}");
 //Using Where we can filter numbers, and it returns that number
 
 
-var evenNumbers = numbers.Where(n/*parameter*/ => n> 10/*condition*/);
-foreach(var num in evenNumbers)
+var greaterThanTen = numbers.Where(n/*parameter*/ => n> 10/*condition*/);
+foreach(var num in greaterThanTen)
 {
     Console.WriteLine(num);
 }
+
+//since Where return a collection, we can use Sum method also and get the sum of that collection
+var sum2 = numbers.Where(n/*parameter*/ => n > 10/*condition*/).Sum();
+Console.WriteLine($"Sum of greater than 10 is {sum2}");
