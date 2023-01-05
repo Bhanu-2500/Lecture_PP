@@ -46,3 +46,6 @@ foreach(var person in people)
 
 var count = people.Count();
 Console.WriteLine($"Count of people {count}");
+
+var tatalExperence = people.Sum(p => p.YearsOfExperience);
+Console.WriteLine($"Total Experience of that 10 people {tatalExperence}");
