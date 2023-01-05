@@ -8,9 +8,10 @@ namespace ConsoleApp1
 {
     public static class DataGenerator //in static we do not need to create objects,and also we call call methods without creating objects
     {
-        public static List<Person> GeneratePeople()
-        {
-            var list = new List<Person>()
+        static GeneratePeople() {
+            var list = List<Person>
+            {
+                var list = new List<Person>()
             {
                 new Person { Id = 1, FirstName = "Tom1", LastName = "Brown1", YearsOfExperience = 10, BirthDay = new DateOnly(2000, 10, 05) },
                 new Person { Id = 2, FirstName = "Tom2", LastName = "Brown2", YearsOfExperience = 22, BirthDay = new DateOnly(2001, 10, 05) },
@@ -25,6 +26,7 @@ namespace ConsoleApp1
 
 
             };
+            }; 
         }
     }
     public class Person
@@ -34,6 +36,18 @@ namespace ConsoleApp1
         public string? LastName { get; set; }
         public int YearsOfExperience { get; set; }
         public DateOnly BirthDay { get; set; }
+
+
+        //Defalut console.write line cannot print this object
+        //Therefore we override Tostring method and fix that can print this object
+        public override string ToString()
+        {
+            var str = $"{Id} {FirstName} {LastName} {BirthDay} {YearsOfExperience}";
+            return str ;
+            //Or we can use directly
+            //return$"{Id} {FirstName} {LastName} {BirthDay} {YearsOfExperience}";
+
+        }
 
     }
 }
